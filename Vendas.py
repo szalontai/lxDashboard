@@ -44,7 +44,6 @@ def init_connection():
     st.subheader(st.query_params.get_all('port')[0])
     st.subheader(st.query_params.get_all('database')[0])
     st.subheader(st.query_params.get_all('username')[0])
-    st.subheader(st.query_params.get_all('username')[0])
     st.subheader(st.query_params.get_all('password')[0])
 
 
@@ -63,9 +62,9 @@ def init_connection():
         + st.query_params.get_all('password')[0] 
     )
 
-    return baseConnString
+    #return baseConnString
   
-    #return  pyodbc.connect(baseConnString)
+    return  pyodbc.connect(baseConnString)
 
 
 def format_number(value,pref=''):
@@ -90,7 +89,6 @@ def format_number(value,pref=''):
 
 conn = init_connection()
 
-print(conn)
 
 
 st.title("Dashboard de vendas - LINX")
