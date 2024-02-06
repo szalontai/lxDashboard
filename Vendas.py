@@ -85,7 +85,7 @@ def format_number(value,pref=''):
 
 #conn = init_connection()
 
-print(conn)
+#print(conn)
 
 
 st.title("Dashboard de vendas - LINX")
