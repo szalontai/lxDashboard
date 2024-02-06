@@ -21,9 +21,6 @@ params = st.query_params.get_all('server')[0]
 print(params[0])
 st.subheader(params[0])
 
-print(params.keys()) 
-
-print(params.values())
 
 @st.cache_resource
 def init_connection():
