@@ -15,12 +15,11 @@ from datetime import datetime
 
 st.set_page_config(layout='wide')
 
-
 params = st.query_params.to_dict()
 
-print(params.keys())
-print(params.values())
+print(params.keys()) 
 
+print(params.values())
 
 @st.cache_resource
 def init_connection():
