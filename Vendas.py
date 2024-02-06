@@ -88,6 +88,9 @@ def format_number(value,pref=''):
 
 
 st.title("Dashboard de vendas - LINX")
+st.subheader("Teste 1")
+
+
 st.sidebar.title('Filtros')
 
 
