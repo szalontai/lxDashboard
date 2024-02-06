@@ -89,8 +89,8 @@ caminho_arquivo_csv = os.path.join(diretorio_pai, 'Vendas.csv')
 
 result='latin-1'
 
-with open(caminho_arquivo_csv, 'rb') as f:
-    result = chardet.detect(f.read())
+#with open(caminho_arquivo_csv, 'rb') as f:
+ #   result = chardet.detect(f.read())
 
 
 # dados = pd.read_csv(caminho_arquivo_csv,   encoding='latin-1')
