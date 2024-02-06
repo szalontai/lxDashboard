@@ -19,10 +19,6 @@ st.set_page_config(layout='wide')
 params = st.query_params.to_dict()
 
 
-
-st.sidebar.title(params.values())
-
-
 @st.cache_resource
 def init_connection():
 
@@ -83,7 +79,7 @@ def format_number(value,pref=''):
 
 #     return data
 
-#conn = init_connection()
+conn = init_connection()
 
 #print(conn)
 
@@ -105,7 +101,7 @@ inner join produtos p on vp.produto = p.produto
 inner join filiais f on v.filial = f.filial
 where entrega>='20200101'
 """
-#dados = pd.read_sql(SQL, conn)
+dados = pd.read_sql(SQL, conn)
 
 
 # diretorio_pai = ""
@@ -121,7 +117,7 @@ where entrega>='20200101'
 # st.subheader(diretorio_pai)
 
 # Verifica se o arquivo de vendas existe
-if True : 
+if False : 
     #not os.path.exists(caminho_arquivo_csv):
     st.subheader("Arquivo Vendas.csv não localizado ! ")
 else:     
