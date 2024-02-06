@@ -105,19 +105,20 @@ dados = pd.read_sql(SQL, conn)
 
 
 diretorio_pai = ""
-with tempfile.TemporaryDirectory() as temp_dir:
-    # Obtém o caminho do diretório temporário
-    caminho_temporario = temp_dir
+#with tempfile.TemporaryDirectory() as temp_dir:
+#    # Obtém o caminho do diretório temporário
+#    caminho_temporario = temp_dir
 
-    # Obtém o diretório pai
-    diretorio_pai = os.path.dirname(caminho_temporario)
+#    # Obtém o diretório pai
+#    diretorio_pai = os.path.dirname(caminho_temporario)
 
-caminho_arquivo_csv = os.path.join(diretorio_pai, 'Vendas.csv')
+#caminho_arquivo_csv = os.path.join(diretorio_pai, 'Vendas.csv')
 
 # st.subheader(diretorio_pai)
 
 # Verifica se o arquivo de vendas existe
-if not os.path.exists(caminho_arquivo_csv):
+if False : 
+    #not os.path.exists(caminho_arquivo_csv):
     st.subheader("Arquivo Vendas.csv não localizado ! ")
 else:     
     
