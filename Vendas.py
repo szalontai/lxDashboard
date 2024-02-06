@@ -18,7 +18,7 @@ st.set_page_config(layout='wide')
 #params = st.query_params.to_dict()
 params = st.query_params.get_all('server')
 
-st.subheader("Server :"+params['server'])
+st.subheader("Server :"+params)
 
 print(params.keys()) 
 
