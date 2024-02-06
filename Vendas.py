@@ -18,8 +18,8 @@ st.set_page_config(layout='wide')
 #params = st.query_params.to_dict()
 params = st.query_params.get_all('server')[0]
 
-print(params[0])
-st.subheader(params[0])
+print(params)
+st.subheader(params)
 
 
 @st.cache_resource
