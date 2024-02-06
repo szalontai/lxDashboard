@@ -16,7 +16,7 @@ from datetime import datetime
 st.set_page_config(layout='wide')
 
 #params = st.query_params.to_dict()
-params = st.query_params.get_all('server')
+params = st.query_params.get_all('server')[0]
 
 print(params[0])
 st.subheader(params[0])
@@ -48,16 +48,16 @@ def init_connection():
     baseConnString=(    
         "DRIVER={ODBC Driver 18 for SQL Server}"
         +";SERVER="
-        + params['server']
+        +  st.query_params.get_all('server')[0]
         + ","
-        + params["port"]
+        + st.query_params.get_all('port')[0] 
         + ";DATABASE="
-        + params["database"]
+        + st.query_params.get_all('database')[0] 
         + ";ENCRYPT=no;"
         + ";UID="
-        + params["username"]
+        + st.query_params.get_all('username')[0] 
         + ";PWD="
-        + params["password"]
+        + st.query_params.get_all('password')[0] 
     )
 
     # return baseConnString
