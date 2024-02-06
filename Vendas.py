@@ -58,9 +58,9 @@ def init_connection():
         + st.query_params.get_all('password')[0] 
     )
 
-    # return baseConnString
+    return baseConnString
   
-    return  pyodbc.connect(baseConnString)
+    #return  pyodbc.connect(baseConnString)
 
 
 def format_number(value,pref=''):
