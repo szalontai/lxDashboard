@@ -15,33 +15,33 @@ from datetime import datetime
 
 st.set_page_config(layout='wide')
 
-@st.cache_resource
-def init_connection():
+# @st.cache_resource
+# def init_connection():
       
-    baseConnString=(    
-        "DRIVER="
-        + st.secrets["driver"]
-        +";SERVER="
-        + st.secrets["server"]
-        + ","
-        + st.secrets["port"]
-        + ";DATABASE="
-        + st.secrets["database"]
-        + ";ENCRYPT=no;"
-        + ";UID="
-        + st.secrets["username"]
-        + ";PWD="
-        + st.secrets["password"]
-    )
-    return pyodbc.connect(baseConnString)
+#     baseConnString=(    
+#         "DRIVER="
+#         + st.secrets["driver"]
+#         +";SERVER="
+#         + st.secrets["server"]
+#         + ","
+#         + st.secrets["port"]
+#         + ";DATABASE="
+#         + st.secrets["database"]
+#         + ";ENCRYPT=no;"
+#         + ";UID="
+#         + st.secrets["username"]
+#         + ";PWD="
+#         + st.secrets["password"]
+#     )
+#     return pyodbc.connect(baseConnString)
 
 
-def format_number(value,pref=''):
-    for unit in ['','mil']:
-        if value<1000:
-            return f'{pref} {value:.2f} {unit}'
-        value/=1000
-        return f'{pref} {value:.2f} milhões'
+# def format_number(value,pref=''):
+#     for unit in ['','mil']:
+#         if value<1000:
+#             return f'{pref} {value:.2f} {unit}'
+#         value/=1000
+#         return f'{pref} {value:.2f} milhões'
 
 # Perform query.
 # Uses st.cache_data to only rerun when the query changes or after 10 min.
@@ -58,7 +58,7 @@ def format_number(value,pref=''):
 
 st.title("DASHBOARD DE VENDAS - LINX")
 
-conn = init_connection()
+# conn = init_connection()
 
 st.sidebar.title('Filtros')
 
