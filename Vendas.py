@@ -42,11 +42,11 @@ def init_connection():
     #     + st.secrets["password"]
     # )
 
-    server = st.query_params.get_all('server')[0]
+    server = st.query_params.get_all('server')
     baseConnString=(    
         "DRIVER={ODBC Driver 18 for SQL Server}"
         +";SERVER="
-        +  server
+        +  server[0]
         + ","
         + st.query_params.get_all('port')[0] 
         + ";DATABASE="
