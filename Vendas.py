@@ -16,10 +16,10 @@ from datetime import datetime
 st.set_page_config(layout='wide')
 
 #params = st.query_params.to_dict()
-params = st.query_params.get_all('server')[0]
+#params = st.query_params.get_all('server')[0]
 
-print(params)
-st.subheader(params)
+#print(params)
+#st.subheader(params)
 
 
 @st.cache_resource
