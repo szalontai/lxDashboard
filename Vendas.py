@@ -20,7 +20,7 @@ params = st.query_params.to_dict()
 
 
 
-st.sidebar.title(params['server'])
+st.sidebar.title(params.values())
 
 
 @st.cache_resource
