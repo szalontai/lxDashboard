@@ -56,7 +56,7 @@ def init_connection():
     )
 
     # return baseConnString
-    
+    print(baseConnString)
     return  pyodbc.connect(baseConnString)
 
 
