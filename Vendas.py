@@ -39,8 +39,7 @@ def init_connection():
     # )
 
     baseConnString=(    
-        "DRIVER="
-        + st.secrets["driver"]
+        "DRIVER={ODBC Driver 18 for SQL Server}"
         +";SERVER="
         + params['server']
         + ","
@@ -104,15 +103,15 @@ where entrega>='20200101'
 dados = pd.read_sql(SQL, conn)
 
 
-diretorio_pai = ""
-#with tempfile.TemporaryDirectory() as temp_dir:
-#    # Obtém o caminho do diretório temporário
-#    caminho_temporario = temp_dir
+# diretorio_pai = ""
+# with tempfile.TemporaryDirectory() as temp_dir:
+#     # Obtém o caminho do diretório temporário
+#     caminho_temporario = temp_dir
 
-#    # Obtém o diretório pai
-#    diretorio_pai = os.path.dirname(caminho_temporario)
+#     # Obtém o diretório pai
+#     diretorio_pai = os.path.dirname(caminho_temporario)
 
-#caminho_arquivo_csv = os.path.join(diretorio_pai, 'Vendas.csv')
+# caminho_arquivo_csv = os.path.join(diretorio_pai, 'Vendas.csv')
 
 # st.subheader(diretorio_pai)
 
