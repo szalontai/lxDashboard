@@ -86,7 +86,10 @@ with tempfile.TemporaryDirectory() as temp_dir:
 
 caminho_arquivo_csv = os.path.join(diretorio_pai, 'Vendas.csv')
 
-st.subheader(diretorio_pai)
+
+diretorio_temporario = tempfile.gettempdir()
+
+st.subheader(diretorio_temporario)
 
 
 result='latin-1'
