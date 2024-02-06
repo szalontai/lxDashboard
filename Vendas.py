@@ -89,6 +89,7 @@ caminho_arquivo_csv = os.path.join(diretorio_pai, 'Vendas.csv')
 
 diretorio_temporario = tempfile.gettempdir()
 
+st.subheader("diretorio_temporario")
 st.subheader(diretorio_temporario)
 
 
