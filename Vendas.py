@@ -18,7 +18,6 @@ st.set_page_config(layout='wide')
 #params = st.query_params.to_dict()
 params = st.query_params.get_all('server')
 
-print(params[0])
 st.subheader(params[0])
 
 
@@ -43,6 +42,8 @@ def init_connection():
     # )
 
     server = st.query_params.get_all('server')
+    st.subheader(server[0])
+
     baseConnString=(    
         "DRIVER={ODBC Driver 18 for SQL Server}"
         +";SERVER="
