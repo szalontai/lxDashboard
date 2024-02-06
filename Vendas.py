@@ -83,7 +83,7 @@ def format_number(value,pref=''):
 
 #     return data
 
-#conn = init_connection()
+conn = init_connection()
 
 #print(conn)
 
